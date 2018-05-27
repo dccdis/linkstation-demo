@@ -1,15 +1,20 @@
 # linkstation-demo
 
-A demo on finding optimal link station in 2d space
+A demo on finding optimal link station in 2d space.
 
 ## Prerequisites
 
-Docker installed
+Docker and docker-compose installed.
 
 ## How to run
 
+Run container:
 ```
 docker-compose run shell
+```
+
+Inside container run main.js:
+```
 node src/main.js <x coordinate> <y coordinate>
 ```
 eg.
