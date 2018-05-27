@@ -1,0 +1,17 @@
+version: '2'
+
+# Compose file to start dev/ci environments
+services:
+
+  # Start bash session in container, usage: docker-compose run shell
+  shell:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: solteq/node:7.5.0
+    command: 'bash -c ''source .env && bash'''
+    working_dir: /usr/src/app
+    ports:
+      - '8080:8080'
+    volumes:
+      - '.:/usr/src/app'
